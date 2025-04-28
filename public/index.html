@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To-do List</h1>
+            <button id="logoutBtn">Logout</button>
+        </div>
+
+        <form id="todoForm">
+            <input type="text" id="taskInput" placeholder="Enter task" required>
+            <input type="date" id="dueDate" required>
+
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Education">Education</option>
+                <option value="Work">Work</option>
+                <option value="Hobbies">Hobbies</option>
+                <option value="Family">Family</option>
+                <option value="Health">Health</option>
+                <option value="Social">Social</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <button type="submit">Add</button>
+        </form>
+
+        <div class="sort-controls">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="priority">Priority</option>
+                <option value="category">Category</option>
+                <option value="due_date">Due Date</option>
+            </select>
+        </div>
+
+        <ul id="todoList"></ul>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="editForm">
+                <input type="text" id="editTaskInput" required>
+                <input type="date" id="editDueDate" required>
+                <select id="editPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <select id="editCategory">
+                    <option value="Personal">Personal</option>
+                    <option value="Education">Education</option>
+                    <option value="Work">Work</option>
+                    <option value="Hobbies">Hobbies</option>
+                    <option value="Family">Family</option>
+                    <option value="Health">Health</option>
+                    <option value="Social">Social</option>
+                    <option value="Others">Others</option>
+                </select>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
